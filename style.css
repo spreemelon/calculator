@@ -6,5 +6,98 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+      background: linear-gradient(to left, #8360c3, #2ebf91);  
+      
 }
+/* calc bk white if current clr looks bad */
+.calculator {
+    background: rgba(0, 0, 0, 0.203);
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* display  calc screen , 1st clear background , back up colors 2nd color code #7C69BF  , 3rd color code  rgba(128, 128, 128, 0.203)*/
+.calculator-display {
+    background: transparent;        
+    color: white;
+    margin: 0;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1 {
+    margin:0;
+    padding: 24px;
+    font-size: 45px;
+    font-family: 'Lucida Console', sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+}
+
+/* scrollbar if the no displayed is too long */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Buttons */
+  .calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+/* button back clr #5495A7 */
+
+  button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #5495A7;
+    color: white;
+    
+  }
+
+  .operator {
+    background:   #2ebf91;
+    color: white;
+    font-size: 30px;
+  }
+
+  .clear {
+    background: #8360c3;
+    color: white;
+  }
+
+ 
+  /* equal sign modify */
+  .equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: #5495A7;
+  }
